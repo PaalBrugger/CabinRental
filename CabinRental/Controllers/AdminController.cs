@@ -99,11 +99,59 @@ public class AdminController : Controller
     public async Task<IActionResult> EditUserForm(string id)
     {
         var user = await _context.Users.FindAsync(id);
-        var isAdmin =  await _userManager.IsInRoleAsync(user, "Admin");
-        var userVM = new UserEditViewModel { Id = user.Id, Email = user.Email, IsAdmin = isAdmin};
-        
-        
-        return View(userVM);
+        var isAdmin = await _userManager.IsInRoleAsync(user, "Admin");
+        var userViewModel = new UserEditViewModel { Id = user.Id, Email = user.Email, IsAdmin = isAdmin };
+
+
+        return View(userViewModel);
+    }
+
+    public async Task<IActionResult> EditUser(UserEditViewModel model)
+    {
+        var user = await _userManager.FindByIdAsync(model.Id);
+        if (user == null)
+        {
+            return NotFound();
+        }
+
+        user.Email = model.Email;
+        var result = await _userManager.UpdateAsync(user);
+
+        if (!result.Succeeded)
+        {
+            foreach (var error in result.Errors)
+            {
+                ModelState.AddModelError("", error.Description);
+            }
+
+            return View("EditUserForm", model);
+        }
+        if (!string.IsNullOrEmpty(model.NewPassword))
+        {
+            var token = await _userManager.GeneratePasswordResetTokenAsync(user);
+            var passwordResult = await _userManager.ResetPasswordAsync(user, token, model.NewPassword);
+
+            if (!passwordResult.Succeeded)
+            {
+                foreach (var error in passwordResult.Errors)
+                {
+                    ModelState.AddModelError("", error.Description);
+                }
+                return View("EditUserForm", model);
+            }
+        }
+
+        var isAdmin = await _userManager.IsInRoleAsync(user, "Admin");
+        if (model.IsAdmin && !isAdmin)
+        {
+            await _userManager.AddToRoleAsync(user, "Admin");
+        }
+        else if (!model.IsAdmin && isAdmin)
+        {
+            await _userManager.RemoveFromRoleAsync(user, "Admin");
+        }
+
+        return RedirectToAction("ManageUsers");
     }
 
     public IActionResult DeleteUser(string id)

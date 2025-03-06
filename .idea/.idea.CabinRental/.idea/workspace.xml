@@ -8,18 +8,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7c2b30c3-ec6e-47db-a4ed-372d95390cd2" name="Changes" comment="Init">
-      <change afterPath="$PROJECT_DIR$/CabinRental/ViewModels/UserEditViewModel.cs" afterDir="false" />
+    <list default="true" id="7c2b30c3-ec6e-47db-a4ed-372d95390cd2" name="Changes" comment="Added user management for admin">
       <change afterPath="$PROJECT_DIR$/CabinRental/ViewModels/UserViewModel.cs" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/CabinRental/Views/Admin/CreateUserForm.cshtml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CabinRental/Views/Admin/EditUserForm.cshtml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/CabinRental/Views/Admin/ManageCabins.cshtml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CabinRental/Views/Admin/ManageUsers.cshtml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.CabinRental/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.CabinRental/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CabinRental.sln.DotSettings.user" beforeDir="false" afterPath="$PROJECT_DIR$/CabinRental.sln.DotSettings.user" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CabinRental/Controllers/AdminController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/CabinRental/Controllers/AdminController.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CabinRental/Controllers/ReservationController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/CabinRental/Controllers/ReservationController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CabinRental/ViewModels/UserEditViewModel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/CabinRental/ViewModels/UserEditViewModel.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CabinRental/Views/Admin/Dashboard.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/CabinRental/Views/Admin/Dashboard.cshtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CabinRental/Views/Admin/EditUserForm.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/CabinRental/Views/Admin/EditUserForm.cshtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CabinRental/Views/Admin/ManageUsers.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/CabinRental/Views/Admin/ManageUsers.cshtml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CabinRental/Views/Cabin/Cabin.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/CabinRental/Views/Cabin/Cabin.cshtml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CabinRental/Views/Reservation/CreateReservation.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/CabinRental/Views/Reservation/CreateReservation.cshtml" afterDir="false" />
     </list>
@@ -142,7 +142,7 @@
       <workItem from="1740168146122" duration="31608000" />
       <workItem from="1740680627266" duration="130000" />
       <workItem from="1740680777254" duration="5999000" />
-      <workItem from="1740841125900" duration="34138000" />
+      <workItem from="1740841125900" duration="36856000" />
     </task>
     <task id="LOCAL−00001" summary="Test2">
       <option name="closed" value="true" />
@@ -356,7 +356,8 @@
     <MESSAGE value="Added admin features." />
     <MESSAGE value="Added toastr" />
     <MESSAGE value="Init" />
-    <option name="LAST_COMMIT_MESSAGE" value="Init" />
+    <MESSAGE value="Added user management for admin" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added user management for admin" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
