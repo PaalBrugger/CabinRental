@@ -1,0 +1,71 @@
+@model IEnumerable<Reservation>
+
+@{
+    ViewBag.Title = "title";
+    Layout = "_Layout";
+}
+
+<h2 class="text-white">My Reservations</h2>
+
+<table class="table table-dark table-striped">
+    <thead>
+    <tr>
+        <th>Cabin</th>
+        <th>Check-in</th>
+        <th>Check-out</th>
+        <th>Total Price</th>
+        <th>Actions</th>
+    </tr>
+    </thead>
+    <tbody>
+    @foreach (var reservation in Model)
+    {
+        <tr>
+            <td>@reservation.Cabin.Name</td>
+            <td>@reservation.CheckInDate.ToString("yyyy-MM-dd")</td>
+            <td>@reservation.CheckOutDate.ToString("yyyy-MM-dd")</td>
+            <td>$@reservation.TotalPrice</td>
+            <td class="align-middle">
+                <div class="d-flex align-items-center gap-2">
+                    <a asp-controller="Reservation" asp-action="ReservationDetails" asp-route-id="@reservation.Id"
+                       class="btn btn-primary btn-sm">View</a>
+
+                    <form asp-controller="Reservation" asp-action="DeleteReservation" asp-route-id="@reservation.Id"
+                          method="post" class="d-inline m-0 p-0"
+                          onsubmit="return confirm('Are you sure you want to delete this reservation?');">
+                        <button type="submit" class="btn btn-danger btn-sm">Delete</button>
+                    </form>
+                </div>
+            </td>
+        </tr>
+    }
+    </tbody>
+</table>
+<div class="d-flex justify-content-center pt-5">
+    <a class="btn btn-primary" asp-controller="Home" asp-action="Index">Home</a>
+</div>
+
+<style>
+    td .btn-sm, td form {
+        display: inline-flex;
+        align-items: center;
+        vertical-align: middle;
+    }
+    td .btn-danger {
+        margin-top: 1px; /* Adjust the value to move the button lower */
+    }
+
+
+    ></style>
+    
+@section Scripts {
+    <script>
+        // Check if TempData contains a success message and show toastr
+        $(document).ready(function () {
+            var message = '@TempData["SuccessMessage"]';
+            if (message) {
+                toastr.success(message);
+            }
+        });
+    </script>
+}

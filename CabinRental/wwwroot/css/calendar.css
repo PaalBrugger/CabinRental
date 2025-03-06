@@ -1,0 +1,54 @@
+/* ✅ Dark Theme Styling */
+.fc-theme-standard td, .fc-theme-standard th {
+    background-color: #333; /* Dark grey background */
+    border-color: #555; /* Slightly lighter borders */
+}
+
+.fc-toolbar-title {
+    color: white !important; /* White month title */
+    font-size: 1.5rem;
+}
+
+.fc-button {
+    color: white !important;
+    background: #444 !important;
+    border: 1px solid #666 !important;
+}
+
+.fc-button:hover {
+    background: #555 !important;
+}
+
+.fc-daygrid-day-number {
+    color: white !important; /* Ensure date numbers are visible */
+}
+
+.fc-daygrid-day {
+    transition: background-color 0.2s ease-in-out;
+}
+
+.fc-daygrid-day:hover {
+    background-color: rgba(255, 255, 255, 0.1); /* Light hover effect */
+}
+
+/* ✅ Booked Dates (Red) */
+.fc-event {
+    color: white !important;
+    background-color: #D32F2F !important; /* Dark red for better visibility */
+    border: 1px solid #B71C1C !important;
+}
+
+/* ✅ Selected Dates (Blue) */
+.fc-event.selected-range {
+    background-color: #1976D2 !important; /* Darker blue for better contrast */
+    border: 1px solid #1565C0 !important;
+}
+
+/* ✅ Check-in/Check-out Dates */
+.fc-event.checkin {
+    background-color: #2196F3 !important; /* Bright blue for visibility */
+}
+
+.fc-event.checkout {
+    background-color: #1E88E5 !important;
+}

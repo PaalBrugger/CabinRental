@@ -1,0 +1,15 @@
+# Ignore configuration files with sensitive data
+appsettings.Development.json
+appsettings.Production.json
+appsettings.json
+
+# Rider & JetBrains IDE-specific files
+.idea/
+*.sln.iml
+
+# Ignore compiled files
+bin/
+obj/
+
+# Ignore logs & temp files
+*.log

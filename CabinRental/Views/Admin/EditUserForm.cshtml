@@ -1,0 +1,40 @@
+@model CabinRental.ViewModels.UserEditViewModel
+
+@{
+    ViewBag.Title = "Edit User";
+    Layout = "_Layout";
+}
+
+<h2 class="text-white">Edit User</h2>
+
+<div class="card bg-dark text-white p-4 mt-3">
+    <form asp-action="EditUser" method="post">
+        <input type="hidden" asp-for="Id" />  
+
+        <div asp-validation-summary="All" class="text-danger"></div>
+
+        <div class="mb-3">
+            <label asp-for="Email" class="form-label">Email</label>
+            <input asp-for="Email" class="form-control" required value="@Model.Email" /> 
+            <span asp-validation-for="Email" class="text-danger"></span>
+        </div>
+
+        <div class="mb-3">
+            <label asp-for="UserName" class="form-label">Username</label>
+            <input asp-for="UserName" class="form-control" required value="@Model.UserName" /> 
+            <span asp-validation-for="UserName" class="text-danger"></span>
+        </div>
+
+        <div class="form-check mb-3">
+            <input asp-for="IsAdmin" class="form-check-input" id="isAdminCheckbox" />  
+            <label for="isAdminCheckbox" class="form-check-label">Admin Access</label>
+        </div>
+
+        <button type="submit" class="btn btn-success">Save Changes</button>
+        <a asp-action="ManageUsers" class="btn btn-secondary">Cancel</a>
+    </form>
+</div>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

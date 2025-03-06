@@ -1,0 +1,25 @@
+@model Reservation
+
+@{
+    ViewBag.Title = "Reservation Details";
+    Layout = "_Layout";
+}
+
+<h2 class="text-white">Reservation Details</h2>
+
+<div class="card bg-dark text-white p-3">
+    <h4>Cabin: @Model.Cabin?.Name</h4>
+    <p><strong>Firstname:</strong> @Model.FirstName</p>
+    <p><strong>LastName:</strong> @Model.LastName</p>
+
+
+    <p><strong>Check-in Date:</strong> @Model.CheckInDate.ToString("yyyy-MM-dd")</p>
+    <p><strong>Check-out Date:</strong> @Model.CheckOutDate.ToString("yyyy-MM-dd")</p>
+    <p><strong>Total Price:</strong> $@Model.TotalPrice</p>
+    
+    <h5 class="mt-3">Cabin Information</h5>
+    <p><strong>Description:</strong> @Model.Cabin?.Description</p>
+    <p><strong>Location:</strong> @Model.Cabin?.Address</p>
+
+    <a asp-controller="Reservation" asp-action="Reservations" class="btn btn-secondary mt-3">Back to Reservations</a>
+</div>

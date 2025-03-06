@@ -1,0 +1,27 @@
+@model Reservation
+
+@{
+    ViewBag.Title = "title";
+    Layout = "_Layout";
+}
+<div class="d-flex flex-column justify-content-start align-items-center vh-100 mt-5 ">
+    <h2 class="text-white">🎉 Booking Confirmed!</h2>
+    <p class="text-white">Thank you, @Model.FirstName, for booking @Model.Cabin.Name.</p>
+    <p class="text-white">Your check-in date is: @Model.CheckInDate.ToShortDateString()</p>
+    <p class="text-white">Your check-out date is: @Model.CheckOutDate.ToShortDateString()</p>
+    <p class="text-white">Total price: $@Model.TotalPrice</p>
+
+    <a asp-controller="Home" asp-action="Index" class="btn btn-primary">Back to Home</a>
+</div>
+
+@section Scripts {
+    <script>
+        // Check if TempData contains a success message and show toastr
+        $(document).ready(function () {
+            var message = '@TempData["SuccessMessage"]';
+            if (message) {
+                toastr.success(message);
+            }
+        });
+    </script>
+}

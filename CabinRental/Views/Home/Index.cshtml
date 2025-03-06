@@ -1,0 +1,62 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+<section class="hero center-content">
+    <div class="container ">
+        <div class="row">
+            <div class="col-md-12 d-flex flex-column align-items-baseline">
+                <h1 class="display-4 text-white pb-5"> CabinRental 🏠</h1>
+
+                <a type="button" asp-area="" asp-controller="CabinList" asp-action="CabinList"
+                   class="btn btn-outline-primary active ps-5 pe-5">View Cabins
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Featured Cabins -->
+<section class="py-5">
+    <div class="container">
+        <h2 class="text-center text-white mb-4">Featured Cabins</h2>
+        <div class="row g-4">
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="Images/Cabin/Cabin1.webp" class="card-img-top" alt="Cabin 1">
+                    <div class="card-body">
+                        <h5 class="card-title">Mountain Retreat</h5>
+                        <p class="card-text">A cozy cabin with breathtaking mountain views.</p>
+                        <p class="fw-bold">$100/night</p>
+                        <a asp-controller="Cabin" asp-action="Cabin" asp-route-cabinId="1" class="btn btn-primary">View
+                            Details</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="Images/Cabin/Cabin2.webp" class="card-img-top" alt="Cabin 2">
+                    <div class="card-body">
+                        <h5 class="card-title">Lakeside Escape</h5>
+                        <p class="card-text">Enjoy serenity by the lake in this beautiful cabin.</p>
+                        <p class="fw-bold">$200/night</p>
+                        <a asp-controller="Cabin" asp-action="Cabin" asp-route-cabinId="2" class="btn btn-primary">View
+                            Details</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="Images/Cabin/Cabin3.webp" class="card-img-top" alt="Cabin 3">
+                    <div class="card-body">
+                        <h5 class="card-title">Forest Hideaway</h5>
+                        <p class="card-text">A secluded cabin surrounded by lush forest.</p>
+                        <p class="fw-bold">$300/night</p>
+                        <a asp-controller="Cabin" asp-action="Cabin" asp-route-cabinId="3" class="btn btn-primary">View
+                            Details</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+

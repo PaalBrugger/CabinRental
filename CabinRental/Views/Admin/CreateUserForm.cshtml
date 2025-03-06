@@ -1,0 +1,36 @@
+@model CabinRental.ViewModels.UserViewModel
+
+@{
+    ViewBag.Title = "Create User";
+    Layout = "_Layout";
+}
+
+<h2 class="text-white">Create New User</h2>
+
+<div class="card bg-dark text-white p-4 mt-3">
+    <form asp-action="CreateUser" method="post" novalidate>
+        <div asp-validation-summary="All" class="text-danger"></div> 
+
+        <div class="mb-3">
+            <label asp-for="Email" class="form-label">Email</label>
+            <input asp-for="Email" class="form-control" required/>
+            <span asp-validation-for="Email" class="text-danger"></span>
+        </div>
+        <div class="mb-3">
+            <label asp-for="Password" class="form-label">Password</label>
+            <input asp-for="Password" type="password" class="form-control" required/>
+            <span asp-validation-for="Password" class="text-danger"></span>
+        </div>
+        <div class="form-check mb-3">
+            <input asp-for="IsAdmin" class="form-check-input" id="isAdminCheckbox">
+            <label for="isAdminCheckbox" class="form-check-label">Make Admin User</label>
+        </div>
+
+        <button type="submit" class="btn btn-success">Create User</button>
+        <a asp-action="ManageUsers" class="btn btn-secondary">Cancel</a>
+    </form>
+</div>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}
