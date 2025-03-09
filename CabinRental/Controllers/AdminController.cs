@@ -99,6 +99,8 @@ public class AdminController : Controller
     public async Task<IActionResult> EditUserForm(string id)
     {
         var user = await _context.Users.FindAsync(id);
+        if (user == null) return NotFound();
+
         var isAdmin = await _userManager.IsInRoleAsync(user, "Admin");
         var userViewModel = new UserEditViewModel { Id = user.Id, Email = user.Email, IsAdmin = isAdmin };
 
@@ -126,6 +128,7 @@ public class AdminController : Controller
 
             return View("EditUserForm", model);
         }
+
         if (!string.IsNullOrEmpty(model.NewPassword))
         {
             var token = await _userManager.GeneratePasswordResetTokenAsync(user);
@@ -137,6 +140,7 @@ public class AdminController : Controller
                 {
                     ModelState.AddModelError("", error.Description);
                 }
+
                 return View("EditUserForm", model);
             }
         }
@@ -170,6 +174,87 @@ public class AdminController : Controller
 
     public IActionResult ManageCabins()
     {
-        return View();
+        var cabins = _context.Cabins.OrderBy(c => c.Id).ToList();
+
+        return View(cabins);
+    }
+
+    public IActionResult EditCabinForm(int id)
+    {
+        var cabin = _context.Cabins.Include(c => c.Images).FirstOrDefault(c => c.Id == id);
+
+        if (cabin == null) return NotFound();
+
+        CabinViewModel cabinViewModel = new CabinViewModel
+        {
+            Id = cabin.Id, Name = cabin.Name, Description = cabin.Description, Address = cabin.Address,
+            City = cabin.City, PricePerNight = cabin.Price, ExistingImages = cabin.Images,
+        };
+
+        return View(cabinViewModel);
+    }
+
+    [HttpPost]
+    public async Task<IActionResult> EditCabin(CabinViewModel model)
+    {
+        var cabin = _context.Cabins.FirstOrDefault(c => c.Id == model.Id);
+        
+        if (cabin == null) return NotFound();
+        
+        cabin.Name = model.Name;
+        cabin.Description = model.Description;
+        cabin.Price = model.PricePerNight;
+        cabin.Address = model.Address;
+        cabin.City = model.City;
+        cabin.Price = model.PricePerNight;
+
+        if (model.NewImages != null && model.NewImages.Any())
+        {
+            string uploadDir = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot/Images/Cabin");
+
+            foreach (var file in model.NewImages)
+            {
+                string fileName = Guid.NewGuid() + Path.GetExtension(file.FileName);
+                string fullPath = Path.Combine(uploadDir, fileName);
+                string relativePath = Path.Combine("/Images/Cabin", fileName); 
+
+
+                using (var stream = new FileStream(fullPath, FileMode.Create))
+                {
+                    await file.CopyToAsync(stream);
+                }
+                
+                cabin.Images.Add(new CabinImage{ ImagePath = relativePath, CabinId = cabin.Id });
+            }
+        }
+        
+        _context.Update(cabin);
+        await _context.SaveChangesAsync();
+        
+        TempData["SuccessMessage"] = "Cabin Updated successfully!";
+
+        
+        return RedirectToAction("ManageCabins");
+    }
+
+    public IActionResult DeleteCabinImage(int id)
+    {
+        var cabinImage = _context.CabinImages.FirstOrDefault(c => c.CabinId == id);
+        
+        return View(cabinImage);
+    }
+
+    public IActionResult DeleteCabin(int id)
+    {
+        var cabin = _context.Cabins.Find(id);
+        if (cabin != null)
+        {
+            _context.Cabins.Remove(cabin);
+            _context.SaveChanges();
+        }
+
+        TempData["SuccessMessage"] = "User deleted successfully!";
+
+        return RedirectToAction("ManageCabins");
     }
 }

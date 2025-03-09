@@ -8,20 +8,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7c2b30c3-ec6e-47db-a4ed-372d95390cd2" name="Changes" comment="Added user management for admin">
-      <change afterPath="$PROJECT_DIR$/CabinRental/ViewModels/UserViewModel.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CabinRental/Views/Admin/CreateUserForm.cshtml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CabinRental/Views/Admin/ManageCabins.cshtml" afterDir="false" />
+    <list default="true" id="7c2b30c3-ec6e-47db-a4ed-372d95390cd2" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/CabinRental/ViewModels/CabinViewModel.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CabinRental/Views/Admin/EditCabinForm.cshtml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.CabinRental/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.CabinRental/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CabinRental.sln.DotSettings.user" beforeDir="false" afterPath="$PROJECT_DIR$/CabinRental.sln.DotSettings.user" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CabinRental/Controllers/AdminController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/CabinRental/Controllers/AdminController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CabinRental/Controllers/ReservationController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/CabinRental/Controllers/ReservationController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CabinRental/Properties/launchSettings.json" beforeDir="false" afterPath="$PROJECT_DIR$/CabinRental/Properties/launchSettings.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CabinRental/ViewModels/UserEditViewModel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/CabinRental/ViewModels/UserEditViewModel.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CabinRental/Views/Admin/Dashboard.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/CabinRental/Views/Admin/Dashboard.cshtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CabinRental/Views/Admin/EditUserForm.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/CabinRental/Views/Admin/EditUserForm.cshtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CabinRental/Views/Admin/ManageUsers.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/CabinRental/Views/Admin/ManageUsers.cshtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CabinRental/Views/Cabin/Cabin.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/CabinRental/Views/Cabin/Cabin.cshtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CabinRental/Views/Reservation/CreateReservation.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/CabinRental/Views/Reservation/CreateReservation.cshtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CabinRental/Views/Admin/ManageCabins.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/CabinRental/Views/Admin/ManageCabins.cshtml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -62,12 +58,13 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/3e1beecd653485b1deb7561c9360f17cdf93ce222c59548f021503eb07450/UserManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/4e89ee1b6e95424eb9773436c19efa91497c2dbb49b56ab11cd658e54966668/ViewDataDictionaryOfT.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/68b06b8592b1287fd78f3ee68566d6a38d6e2f45b9a9e6ebd4d0e9972f7c29/Object.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/7b2e54a547bd458611a4b8b182d2d96d3296b535c4b172a72b3320ca52352a/Directory.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/b90d6b47d6330753e855af18818b97d4207f32c6ee4b793faffc029f069f4/String.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/bf9021a960b74107a7e141aa06bc9d8a0a53c929178c2fb95b1597be8af8dc/ExceptionDispatchInfo.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/db7395f4add94e6d10e515b3e55373f2821f8323de7dc8e314d78feefacf5584/ActionMethodExecutor.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/ea93d582c2debe8d7c89f3f4285f5130809d8b22e1f4c4d9634818087635/RazorPageOfT.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/CabinRental/Areas/Identity/Pages/Account/Manage/_ManageNav.cshtml" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" root2="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/CabinRental/Models/Cabin.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="mock:///Users/paalrebnordbrugger/RiderProjects/CabinRental/CabinRental/Views/Shared/_Layout.cshtml" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" root2="SKIP_HIGHLIGHTING" />
   </component>
   <component name="KubernetesApiPersistence">{}</component>
   <component name="KubernetesApiProvider">{
@@ -142,7 +139,8 @@
       <workItem from="1740168146122" duration="31608000" />
       <workItem from="1740680627266" duration="130000" />
       <workItem from="1740680777254" duration="5999000" />
-      <workItem from="1740841125900" duration="36856000" />
+      <workItem from="1740841125900" duration="46672000" />
+      <workItem from="1741437559062" duration="5269000" />
     </task>
     <task id="LOCAL−00001" summary="Test2">
       <option name="closed" value="true" />
@@ -270,7 +268,14 @@
       <option name="presentableId" value="LOCAL−00018" />
       <updated>1741194860806</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL−00019" summary="Added user management for admin">
+      <option name="closed" value="true" />
+      <created>1741272967147</created>
+      <option name="number" value="LOCAL−00019" />
+      <option name="presentableId" value="LOCAL−00019" />
+      <updated>1741272967148</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

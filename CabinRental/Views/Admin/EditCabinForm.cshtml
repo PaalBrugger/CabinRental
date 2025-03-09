@@ -1,0 +1,82 @@
+@model CabinRental.ViewModels.CabinViewModel
+
+@{
+    ViewBag.Title = "Edit Cabin";
+    Layout = "_Layout";
+}
+
+<h2 class="text-white">Edit Cabin</h2>
+
+<div class="card bg-dark text-white p-4 mt-3">
+    <form asp-action="EditCabin" method="post" enctype="multipart/form-data">
+        <input type="hidden" asp-for="Id"/> <!-- Keep track of Cabin ID -->
+
+        <div asp-validation-summary="All" class="text-danger"></div>
+
+        <div class="mb-3">
+            <label asp-for="Name" class="form-label">Cabin Name</label>
+            <input asp-for="Name" class="form-control" required/>
+            <span asp-validation-for="Name" class="text-danger"></span>
+        </div>
+
+        <div class="mb-3">
+            <label asp-for="Address" class="form-label">Address</label>
+            <input asp-for="Address" class="form-control" required/>
+            <span asp-validation-for="Address" class="text-danger"></span>
+        </div>
+
+        <div class="mb-3">
+            <label asp-for="City" class="form-label">City</label>
+            <input asp-for="City" class="form-control" required/>
+            <span asp-validation-for="City" class="text-danger"></span>
+        </div>
+
+        <div class="mb-3">
+            <label asp-for="Description" class="form-label">Description</label>
+            <input asp-for="Description" class="form-control" required/>
+            <span asp-validation-for="Description" class="text-danger"></span>
+        </div>
+
+        <div class="mb-3">
+            <label asp-for="PricePerNight" class="form-label">Price Per Night</label>
+            <input asp-for="PricePerNight" type="number" class="form-control" required step="0.01"/>
+            <span asp-validation-for="PricePerNight" class="text-danger"></span>
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label">Upload New Images</label>
+            <input type="file" asp-for="NewImages" multiple class="form-control"/>
+        </div>
+
+        <button type="submit" class="btn btn-success">Save Changes</button>
+        <a asp-action="ManageCabins" class="btn btn-secondary">Cancel</a>
+    </form>
+</div>
+
+<h4 class="text-white">Cabin Images</h4>
+
+<div class="mb-3 d-flex flex-wrap gap-3">  
+    @foreach (var image in Model.ExistingImages)
+    {
+        <div class="text-center">
+            <div class="d-flex flex-column align-items-center">
+                <img src="@image.ImagePath" alt="Cabin Image" class="img-thumbnail"
+                     style="width:120px; height:120px; object-fit:cover;"/>
+                
+                <form asp-action="DeleteCabinImage" method="post" class="mt-2">
+                    <input type="hidden" name="imagePath" value="@image.ImagePath"/>
+                    <input type="hidden" name="cabinId" value="@Model.Id"/>
+                    <button type="submit" class="btn btn-danger btn-sm">Delete</button>
+                </form>
+            </div>
+        </div>
+    }
+</div>
+
+}
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial"/>
+}
+
+
