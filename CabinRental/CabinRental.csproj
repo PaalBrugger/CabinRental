@@ -34,6 +34,16 @@
       <AdditionalFiles Include="Areas\Admin\Views\UserManager\CreateUserForm.cshtml" />
       <AdditionalFiles Include="Areas\Admin\Views\UserManager\EditUserForm.cshtml" />
       <AdditionalFiles Include="Areas\Admin\Views\UserManager\ManageUsers.cshtml" />
+      <AdditionalFiles Include="Areas\Customer\Views\Cabin\Cabin.cshtml" />
+      <AdditionalFiles Include="Areas\Customer\Views\Reservation\Confirmation.cshtml" />
+      <AdditionalFiles Include="Areas\Customer\Views\Reservation\CreateReservationForm.cshtml" />
+      <AdditionalFiles Include="Areas\Customer\Views\Reservation\ReservationDetails.cshtml" />
+      <AdditionalFiles Include="Areas\Customer\Views\Reservation\Reservations.cshtml" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <_ContentIncludedByDefault Remove="Views\Cabin\Cabin.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\CabinList\CabinList.cshtml" />
     </ItemGroup>
 
 </Project>

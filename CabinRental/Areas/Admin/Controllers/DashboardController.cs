@@ -18,7 +18,7 @@ public class DashboardController : Controller
         _userManager = userManager;
     }
 
-    public IActionResult Dashboard()
+    public IActionResult Index()
     {
         return View();
     }

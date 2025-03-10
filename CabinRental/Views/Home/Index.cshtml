@@ -7,7 +7,7 @@
             <div class="col-md-12 d-flex flex-column align-items-baseline">
                 <h1 class="display-4 text-white pb-5"> CabinRental 🏠</h1>
 
-                <a type="button" asp-area="" asp-controller="CabinList" asp-action="CabinList"
+                <a type="button" asp-area="Customer" asp-controller="Cabin" asp-action="CabinList"
                    class="btn btn-outline-primary active ps-5 pe-5">View Cabins
                 </a>
             </div>
@@ -27,7 +27,7 @@
                         <h5 class="card-title">Mountain Retreat</h5>
                         <p class="card-text">A cozy cabin with breathtaking mountain views.</p>
                         <p class="fw-bold">$100/night</p>
-                        <a asp-controller="Cabin" asp-action="Cabin" asp-route-cabinId="1" class="btn btn-primary">View
+                        <a asp-area="Customer" asp-controller="Cabin" asp-action="Cabin" asp-route-cabinId="1" class="btn btn-primary">View
                             Details</a>
                     </div>
                 </div>
@@ -39,7 +39,7 @@
                         <h5 class="card-title">Lakeside Escape</h5>
                         <p class="card-text">Enjoy serenity by the lake in this beautiful cabin.</p>
                         <p class="fw-bold">$200/night</p>
-                        <a asp-controller="Cabin" asp-action="Cabin" asp-route-cabinId="2" class="btn btn-primary">View
+                        <a asp-area="Customer" asp-controller="Cabin" asp-action="Cabin" asp-route-cabinId="2" class="btn btn-primary">View
                             Details</a>
                     </div>
                 </div>
@@ -51,7 +51,7 @@
                         <h5 class="card-title">Forest Hideaway</h5>
                         <p class="card-text">A secluded cabin surrounded by lush forest.</p>
                         <p class="fw-bold">$300/night</p>
-                        <a asp-controller="Cabin" asp-action="Cabin" asp-route-cabinId="3" class="btn btn-primary">View
+                        <a asp-area="Customer" asp-controller="Cabin" asp-action="Cabin" asp-route-cabinId="3" class="btn btn-primary">View
                             Details</a>
                     </div>
                 </div>

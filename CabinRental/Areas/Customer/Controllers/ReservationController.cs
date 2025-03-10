@@ -4,8 +4,8 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
-namespace CabinRental.Controllers;
-
+namespace CabinRental.Areas.Customer.Controllers;
+[Area("Customer")]
 public class ReservationController : Controller
 {
     private readonly ApplicationDBContext _context;
@@ -18,7 +18,7 @@ public class ReservationController : Controller
     }
 
     [HttpGet]
-    public async Task<IActionResult> CreateReservation(int cabinId)
+    public async Task<IActionResult> CreateReservationForm(int cabinId)
     {
         var user = await _userManager.GetUserAsync(User);
 

@@ -37,7 +37,7 @@
                 <p class="card-text text-white">@cabin.Address</p>
                 <p class="card-text text-white">@cabin.City</p>
                 <p class="fw-bold text-white">$@cabin.Price/night</p>
-                <a type="button" asp-controller="Cabin" asp-action="Cabin" asp-route-cabinId="@cabin.Id" class="btn btn-primary">Book Now</a>
+                <a type="button" asp-area="Customer" asp-controller="Cabin" asp-action="Cabin" asp-route-cabinId="@cabin.Id" class="btn btn-primary">Book Now</a>
             </div>
         }
     </div>

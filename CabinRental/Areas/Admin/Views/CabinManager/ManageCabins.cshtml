@@ -30,9 +30,9 @@
             <td>$@cabin.Price</td>
             <td>@cabin.Description</td>
             <td>
-                <a asp-action="EditCabinForm" asp-route-id="@cabin.Id" class="btn btn-warning btn-sm">Edit</a>
+                <a asp-area="Admin" asp-action="EditCabinForm" asp-route-id="@cabin.Id" class="btn btn-warning btn-sm">Edit</a>
 
-                <form asp-action="DeleteCabin" asp-route-id="@cabin.Id" method="post" class="d-inline"
+                <form asp-area="Admin" asp-action="DeleteCabin" asp-route-id="@cabin.Id" method="post" class="d-inline"
                       onsubmit="return confirm('Are you sure you want to delete this cabin?');">
                     <button type="submit" class="btn btn-danger btn-sm">Delete</button>
                 </form>
@@ -43,7 +43,7 @@
 </table>
 
 <a asp-area="Admin" asp-controller="CabinManager" asp-action="CreateCabinForm" class="btn btn-success mt-3">Add New Cabin</a>
-<a asp-area="Admin" asp-controller="Dashboard" asp-action="Dashboard" class="btn btn-secondary mt-3">Back to Admin Panel</a>
+<a asp-area="Admin" asp-controller="Dashboard" asp-action="Index" class="btn btn-secondary mt-3">Back to Admin Panel</a>
 
 <input type="hidden" id="tempDataSuccessMessage" value="@TempData["SuccessMessage"]" />
 

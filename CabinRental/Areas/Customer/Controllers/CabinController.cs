@@ -1,8 +1,9 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
-namespace CabinRental.Controllers;
+namespace CabinRental.Areas.Customer.Controllers;
 
+[Area("Customer")]
 public class CabinController : Controller
 {
     private readonly ILogger<CabinController> _logger;
@@ -12,6 +13,11 @@ public class CabinController : Controller
     {
         _logger = logger;
         _context = context;
+    }
+    public IActionResult CabinList()
+    {
+        var cabins = _context.Cabins.Include(c => c.Images).ToList();
+        return View("CabinList",cabins);
     }
 
     public IActionResult Cabin(int? cabinId)

@@ -37,8 +37,8 @@
             <p class="text-white"><strong>Description:</strong> @Model.Description</p>
             <p class="text-white"><strong>Location:</strong> @Model.Address, @Model.City</p>
             
-            <a asp-controller="Reservation" asp-action="CreateReservation" asp-route-cabinId="@Model.Id" class="btn btn-success">Book Now</a>
-            <a asp-controller="CabinList" asp-action="CabinList" class="btn btn-secondary">Back to List</a>
+            <a asp-area="Customer" asp-controller="Reservation" asp-action="CreateReservationForm" asp-route-cabinId="@Model.Id" class="btn btn-success">Book Now</a>
+            <a asp-area="Customer" asp-controller="Cabin" asp-action="CabinList" class="btn btn-secondary">⬅  Back to List</a>
         </div>
     </div>
     
@@ -52,7 +52,7 @@
 
             var calendar = new FullCalendar.Calendar(calendarEl, {
                 initialView: "dayGridMonth",
-                events: "/Cabin/GetReservations?cabinId=@Model.Id", // Fetch booked dates
+                events: "/Customer/Cabin/GetReservations?cabinId=@Model.Id", // Fetch booked dates
                 eventColor: "red", // Default color for booked dates
                 height: 500,
                 contentHeight: "auto",

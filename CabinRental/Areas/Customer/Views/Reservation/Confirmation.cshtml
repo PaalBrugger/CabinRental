@@ -11,7 +11,7 @@
     <p class="text-white">Your check-out date is: @Model.CheckOutDate.ToShortDateString()</p>
     <p class="text-white">Total price: $@Model.TotalPrice</p>
 
-    <a asp-controller="Home" asp-action="Index" class="btn btn-primary">Back to Home</a>
+    <a asp-area="" asp-controller="Home" asp-action="Index" class="btn btn-primary">Back to Home</a>
 </div>
 
 <input type="hidden" id="tempDataSuccessMessage" value="@TempData["SuccessMessage"]" />

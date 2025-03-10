@@ -7,7 +7,7 @@
 
 <h2 class="text-white">Book @Model.CabinName</h2>
 
-<form method="post">
+<form asp-area="Customer" asp-controller="Reservation" asp-action="CreateReservation" method="post">
     <input type="hidden" asp-for="CabinId"/>
     <input type="hidden" asp-for="CabinName"/>
     <input type="hidden" asp-for="PricePerNight" id="pricePerNight"/>
@@ -89,7 +89,7 @@
         var selectedEvents = [];
         
 
-        fetch("/Cabin/GetReservations?cabinId=@Model.CabinId")
+        fetch("/Customer/Cabin/GetReservations?cabinId=@Model.CabinId")
             .then(response => response.json())
             .then(data => {
                 unavailableDates = data.map(event => ({

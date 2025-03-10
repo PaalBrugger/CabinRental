@@ -8,7 +8,7 @@
 <h2 class="text-white">Edit Cabin</h2>
 
 <div class="card bg-dark text-white p-4 mt-3">
-    <form asp-action="EditCabin" method="post" enctype="multipart/form-data">
+    <form asp-area="Admin"  asp-action="EditCabin" method="post" enctype="multipart/form-data">
         <input type="hidden" asp-for="Id"/> <!-- Keep track of Cabin ID -->
 
         <div asp-validation-summary="All" class="text-danger"></div>
@@ -63,7 +63,7 @@
                 <img src="@image.ImagePath" alt="Cabin Image" class="img-thumbnail"
                      style="width:120px; height:120px; object-fit:cover;"/>
                 
-                <form asp-action="DeleteCabinImage" method="post" class="mt-2">
+                <form asp-area="Admin" asp-action="DeleteCabinImage" method="post" class="mt-2">
                     <input type="hidden" name="imagePath" value="@image.ImagePath"/>
                     <input type="hidden" name="cabinId" value="@Model.Id"/>
                     <button type="submit" class="btn btn-danger btn-sm">Delete</button>
