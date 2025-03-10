@@ -46,14 +46,8 @@
 <span><a class="btn btn-primary mt-3" asp-controller="Admin" asp-action="AddReservation">Add Reservation</a>
     <a class="btn btn-primary mt-3" asp-controller="Admin" asp-action="Dashboard">Back to Admin Panel</a></span>
     
+<input type="hidden" id="tempDataSuccessMessage" value="@TempData["SuccessMessage"]" />
+
 @section Scripts {
-    <script>
-        // Check if TempData contains a success message and show toastr
-        $(document).ready(function () {
-            var message = '@TempData["SuccessMessage"]';
-            if (message) {
-                toastr.success(message);
-            }
-        });
-    </script>
+    <script src="~/js/toastrNotification.js"></script>
 }

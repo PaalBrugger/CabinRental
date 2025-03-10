@@ -121,7 +121,7 @@ namespace CabinRental.Areas.Identity.Pages.Account
                     }
                     else
                     {
-                        return RedirectToPage("/index");
+                        return LocalRedirect("~/");
                     }
                 }
                 if (result.RequiresTwoFactor)

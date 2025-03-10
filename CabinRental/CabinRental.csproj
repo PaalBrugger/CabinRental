@@ -30,4 +30,10 @@
       <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="9.0.0" />
     </ItemGroup>
 
+    <ItemGroup>
+      <AdditionalFiles Include="Areas\Admin\Views\UserManager\CreateUserForm.cshtml" />
+      <AdditionalFiles Include="Areas\Admin\Views\UserManager\EditUserForm.cshtml" />
+      <AdditionalFiles Include="Areas\Admin\Views\UserManager\ManageUsers.cshtml" />
+    </ItemGroup>
+
 </Project>

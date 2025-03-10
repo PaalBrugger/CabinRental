@@ -9,15 +9,31 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7c2b30c3-ec6e-47db-a4ed-372d95390cd2" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/CabinRental/ViewModels/CabinViewModel.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CabinRental/Views/Admin/EditCabinForm.cshtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CabinRental/Areas/Admin/Controllers/CabinManagerController.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CabinRental/Areas/Admin/Controllers/DashboardController.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CabinRental/Areas/Admin/Controllers/ReservationManagerController.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CabinRental/Areas/Admin/Controllers/UserManagerController.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CabinRental/Areas/Admin/Views/_ViewImports.cshtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CabinRental/Areas/Admin/Views/_ViewStart.cshtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CabinRental/wwwroot/js/toastrNotification.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.CabinRental/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.CabinRental/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CabinRental.sln.DotSettings.user" beforeDir="false" afterPath="$PROJECT_DIR$/CabinRental.sln.DotSettings.user" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CabinRental/Controllers/AdminController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/CabinRental/Controllers/AdminController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CabinRental/Properties/launchSettings.json" beforeDir="false" afterPath="$PROJECT_DIR$/CabinRental/Properties/launchSettings.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CabinRental/ViewModels/UserEditViewModel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/CabinRental/ViewModels/UserEditViewModel.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CabinRental/Views/Admin/Dashboard.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/CabinRental/Views/Admin/Dashboard.cshtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CabinRental/Views/Admin/ManageCabins.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/CabinRental/Views/Admin/ManageCabins.cshtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CabinRental/Areas/Identity/Pages/Account/Login.cshtml.cs" beforeDir="false" afterPath="$PROJECT_DIR$/CabinRental/Areas/Identity/Pages/Account/Login.cshtml.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CabinRental/CabinRental.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/CabinRental/CabinRental.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CabinRental/Controllers/AdminController.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CabinRental/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/CabinRental/Program.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CabinRental/Views/Admin/CreateUserForm.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/CabinRental/Areas/Admin/Views/UserManager/CreateUserForm.cshtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CabinRental/Views/Admin/Dashboard.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/CabinRental/Areas/Admin/Views/Dashboard/Dashboard.cshtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CabinRental/Views/Admin/EditCabinForm.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/CabinRental/Areas/Admin/Views/CabinManager/EditCabinForm.cshtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CabinRental/Views/Admin/EditUserForm.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/CabinRental/Areas/Admin/Views/UserManager/EditUserForm.cshtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CabinRental/Views/Admin/ManageCabins.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/CabinRental/Areas/Admin/Views/CabinManager/ManageCabins.cshtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CabinRental/Views/Admin/ManageReservations.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/CabinRental/Areas/Admin/Views/ReservationManager/ManageReservations.cshtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CabinRental/Views/Admin/ManageUsers.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/CabinRental/Areas/Admin/Views/UserManager/ManageUsers.cshtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CabinRental/Views/Reservation/Confirmation.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/CabinRental/Views/Reservation/Confirmation.cshtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CabinRental/Views/Reservation/CreateReservation.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/CabinRental/Views/Reservation/CreateReservation.cshtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CabinRental/Views/Reservation/Reservations.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/CabinRental/Views/Reservation/Reservations.cshtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CabinRental/Views/Shared/_Layout.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/CabinRental/Views/Shared/_Layout.cshtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CabinRental/Views/_ViewImports.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/CabinRental/Views/_ViewImports.cshtml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -30,8 +46,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="JavaScript File" />
         <option value="CSS File" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
@@ -57,6 +73,7 @@
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/3e1beecd653485b1deb7561c9360f17cdf93ce222c59548f021503eb07450/UserManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/4e89ee1b6e95424eb9773436c19efa91497c2dbb49b56ab11cd658e54966668/ViewDataDictionaryOfT.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/5ed43c759abe2fb1364a742263dee060bba560fc9d7bba12e2fc6a9bbe1b/ExecutorFactory.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/68b06b8592b1287fd78f3ee68566d6a38d6e2f45b9a9e6ebd4d0e9972f7c29/Object.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/7b2e54a547bd458611a4b8b182d2d96d3296b535c4b172a72b3320ca52352a/Directory.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/b90d6b47d6330753e855af18818b97d4207f32c6ee4b793faffc029f069f4/String.cs" root0="FORCE_HIGHLIGHTING" />
@@ -84,7 +101,7 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
-    ".NET Launch Settings Profile.CabinRental: http.executor": "Run",
+    ".NET Launch Settings Profile.CabinRental: http.executor": "Debug",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
     "git-widget-placeholder": "master",
@@ -140,7 +157,11 @@
       <workItem from="1740680627266" duration="130000" />
       <workItem from="1740680777254" duration="5999000" />
       <workItem from="1740841125900" duration="46672000" />
-      <workItem from="1741437559062" duration="5269000" />
+      <workItem from="1741437559062" duration="14361000" />
+      <workItem from="1741614480244" duration="709000" />
+      <workItem from="1741615294993" duration="300000" />
+      <workItem from="1741615612720" duration="89000" />
+      <workItem from="1741615728765" duration="3076000" />
     </task>
     <task id="LOCAL−00001" summary="Test2">
       <option name="closed" value="true" />
@@ -275,7 +296,14 @@
       <option name="presentableId" value="LOCAL−00019" />
       <updated>1741272967148</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL−00020" summary="Added Cabin management">
+      <option name="closed" value="true" />
+      <created>1741530156450</created>
+      <option name="number" value="LOCAL−00020" />
+      <option name="presentableId" value="LOCAL−00020" />
+      <updated>1741530156450</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -362,7 +390,8 @@
     <MESSAGE value="Added toastr" />
     <MESSAGE value="Init" />
     <MESSAGE value="Added user management for admin" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added user management for admin" />
+    <MESSAGE value="Added Cabin management" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added Cabin management" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

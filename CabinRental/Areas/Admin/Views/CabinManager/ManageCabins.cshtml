@@ -42,17 +42,11 @@
     </tbody>
 </table>
 
-<a asp-action="CreateCabin" class="btn btn-success mt-3">Add New Cabin</a>
-<a asp-controller="Admin" asp-action="Dashboard" class="btn btn-secondary mt-3">Back to Admin Panel</a>
+<a asp-area="Admin" asp-controller="CabinManager" asp-action="CreateCabinForm" class="btn btn-success mt-3">Add New Cabin</a>
+<a asp-area="Admin" asp-controller="Dashboard" asp-action="Dashboard" class="btn btn-secondary mt-3">Back to Admin Panel</a>
+
+<input type="hidden" id="tempDataSuccessMessage" value="@TempData["SuccessMessage"]" />
 
 @section Scripts {
-    <script>
-        // Check if TempData contains a success message and show toastr
-        $(document).ready(function () {
-            var message = '@TempData["SuccessMessage"]';
-            if (message) {
-                toastr.success(message);
-            }
-        });
-    </script>
+    <script src="~/js/toastrNotification.js"></script>
 }

@@ -12,7 +12,7 @@
                 <div class="card-body text-center">
                     <h5 class="card-title">Manage Users</h5>
                     <p class="card-text">View, edit, and manage user accounts.</p>
-                    <a asp-controller="Admin" asp-action="ManageUsers" class="btn btn-primary w-100">Go to Users</a>
+                    <a asp-area="Admin" asp-controller="UserManager" asp-action="ManageUsers" class="btn btn-primary w-100">Go to Users</a>
                 </div>
             </div>
         </div>
@@ -22,7 +22,7 @@
                 <div class="card-body text-center">
                     <h5 class="card-title">Manage Reservations</h5>
                     <p class="card-text">View and control all reservations.</p>
-                    <a asp-controller="Admin" asp-action="ManageReservations" class="btn btn-primary w-100">Go to
+                    <a asp-area="Admin" asp-controller="ReservationManager" asp-action="ManageReservations" class="btn btn-primary w-100">Go to
                         Reservations</a>
                 </div>
             </div>
@@ -32,7 +32,7 @@
                 <div class="card-body text-center">
                     <h5 class="card-title">Manage Cabins</h5>
                     <p class="card-text">View, edit and manage cabins.</p>
-                    <a asp-controller="Admin" asp-action="ManageCabins" class="btn btn-primary w-100">Go to
+                    <a asp-area="Admin" asp-controller="CabinManager" asp-action="ManageCabins" class="btn btn-primary w-100">Go to
                         Cabins</a>
                 </div>
             </div>

@@ -1,4 +1,4 @@
-@model CabinRental.ViewModels.CabinViewModel
+@model CabinViewModel
 
 @{
     ViewBag.Title = "Edit Cabin";
@@ -49,7 +49,7 @@
         </div>
 
         <button type="submit" class="btn btn-success">Save Changes</button>
-        <a asp-action="ManageCabins" class="btn btn-secondary">Cancel</a>
+        <a asp-area="Admin" asp-action="ManageCabins" class="btn btn-secondary">Cancel</a>
     </form>
 </div>
 
