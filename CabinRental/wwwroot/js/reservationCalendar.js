@@ -63,8 +63,6 @@ document.addEventListener("DOMContentLoaded", function () {
                             return;
                         }
                         document.getElementById("checkOutDate").value = formatDate(selectedCheckOut);
-                        console.log(selectedCheckOut);
-                        console.log(selectedCheckIn);
                         let nights = Math.ceil((selectedCheckOut - selectedCheckIn) / (1000 * 60 * 60 * 24));
                         totalPriceField.textContent = (nights * pricePerNight).toFixed(2);
 
