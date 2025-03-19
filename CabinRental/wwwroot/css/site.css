@@ -46,4 +46,12 @@ body {
 #toast-container {
   top: 75px !important;
 }
+.carousel-item img {
+  height: 300px;
+  object-fit: contain; 
+  width: 100%;
+}
+
+
+
 

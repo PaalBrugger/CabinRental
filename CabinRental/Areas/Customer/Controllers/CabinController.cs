@@ -17,7 +17,7 @@ public class CabinController : Controller
     public IActionResult CabinList()
     {
         var cabins = _context.Cabins.Include(c => c.Images).ToList();
-        return View("CabinList",cabins);
+        return View(cabins);
     }
 
     public IActionResult Cabin(int? cabinId)

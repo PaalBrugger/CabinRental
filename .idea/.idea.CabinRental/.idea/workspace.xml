@@ -8,32 +8,20 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7c2b30c3-ec6e-47db-a4ed-372d95390cd2" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/CabinRental/Areas/Admin/Views/CabinManager/CreateCabinForm.cshtml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CabinRental/Areas/Admin/Views/ReservationManager/CreateReservationForm.cshtml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CabinRental/Areas/Admin/Views/ReservationManager/EditReservationForm.cshtml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CabinRental/ViewModels/AdminCreateCabinViewModel.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CabinRental/ViewModels/AdminReservationViewModel.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CabinRental/wwwroot/js/createReservationAdmin.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CabinRental/wwwroot/js/editReservationAdmin.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CabinRental/wwwroot/js/reservationCalendar.js" afterDir="false" />
+    <list default="true" id="7c2b30c3-ec6e-47db-a4ed-372d95390cd2" name="Changes" comment="Added Admin Reservation and Cabin management">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.CabinRental/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.CabinRental/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CabinRental.sln.DotSettings.user" beforeDir="false" afterPath="$PROJECT_DIR$/CabinRental.sln.DotSettings.user" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CabinRental/Areas/Admin/Controllers/CabinManagerController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/CabinRental/Areas/Admin/Controllers/CabinManagerController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CabinRental/Areas/Admin/Controllers/ReservationManagerController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/CabinRental/Areas/Admin/Controllers/ReservationManagerController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CabinRental/Areas/Admin/Controllers/UserManagerController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/CabinRental/Areas/Admin/Controllers/UserManagerController.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CabinRental/Areas/Admin/Views/CabinManager/EditCabinForm.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/CabinRental/Areas/Admin/Views/CabinManager/EditCabinForm.cshtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CabinRental/Areas/Admin/Views/ReservationManager/ManageReservations.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/CabinRental/Areas/Admin/Views/ReservationManager/ManageReservations.cshtml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CabinRental/Areas/Customer/Controllers/CabinController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/CabinRental/Areas/Customer/Controllers/CabinController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CabinRental/Areas/Customer/Controllers/ReservationController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/CabinRental/Areas/Customer/Controllers/ReservationController.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CabinRental/Areas/Customer/Views/Cabin/Cabin.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/CabinRental/Areas/Customer/Views/Cabin/Cabin.cshtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CabinRental/Areas/Customer/Views/Reservation/CreateReservationForm.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/CabinRental/Areas/Customer/Views/Reservation/CreateReservationForm.cshtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CabinRental/Areas/Customer/Views/Reservation/Reservations.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/CabinRental/Areas/Customer/Views/Reservation/Reservations.cshtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CabinRental/Models/Cabin.cs" beforeDir="false" afterPath="$PROJECT_DIR$/CabinRental/Models/Cabin.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CabinRental/ViewModels/ReservationViewModel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/CabinRental/ViewModels/ReservationViewModel.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CabinRental/Views/Shared/_Layout.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/CabinRental/Views/Shared/_Layout.cshtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CabinRental/Areas/Customer/Views/Cabin/CabinList.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/CabinRental/Areas/Customer/Views/Cabin/CabinList.cshtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CabinRental/wwwroot/Images/Cabin/006aaf92-e6a4-4c08-a280-baa3e7b0d9d5.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CabinRental/wwwroot/Images/Cabin/Cabin1Interior.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CabinRental/wwwroot/Images/Cabin/Cabin2Interior.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CabinRental/wwwroot/Images/Cabin/Cabin3Interior.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CabinRental/wwwroot/Images/Cabin/Cabin4.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CabinRental/wwwroot/Images/Cabin/Cabin4Interior.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CabinRental/wwwroot/Images/Cabin/c58f4c63-74d5-4245-9288-3867a4e5e84f.webp" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/CabinRental/wwwroot/css/site.css" beforeDir="false" afterPath="$PROJECT_DIR$/CabinRental/wwwroot/css/site.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CabinRental/wwwroot/js/toastrNotification.js" beforeDir="false" afterPath="$PROJECT_DIR$/CabinRental/wwwroot/js/toastrNotification.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -111,7 +99,7 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
-    ".NET Launch Settings Profile.CabinRental: http.executor": "Debug",
+    ".NET Launch Settings Profile.CabinRental: http.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
     "git-widget-placeholder": "master",
@@ -174,7 +162,7 @@
       <workItem from="1741615728765" duration="8502000" />
       <workItem from="1741628830487" duration="12427000" />
       <workItem from="1741702447500" duration="20411000" />
-      <workItem from="1742396266688" duration="6111000" />
+      <workItem from="1742396266688" duration="10614000" />
     </task>
     <task id="LOCAL−00001" summary="Test2">
       <option name="closed" value="true" />
@@ -337,7 +325,14 @@
       <option name="presentableId" value="LOCAL−00023" />
       <updated>1741629893472</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL−00024" summary="Added Admin Reservation and Cabin management">
+      <option name="closed" value="true" />
+      <created>1742402679398</created>
+      <option name="number" value="LOCAL−00024" />
+      <option name="presentableId" value="LOCAL−00024" />
+      <updated>1742402679398</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -428,7 +423,8 @@
     <MESSAGE value="Added Admin area and refactored files" />
     <MESSAGE value="Added customer area and bug fixes" />
     <MESSAGE value="Fixed footer" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fixed footer" />
+    <MESSAGE value="Added Admin Reservation and Cabin management" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added Admin Reservation and Cabin management" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
