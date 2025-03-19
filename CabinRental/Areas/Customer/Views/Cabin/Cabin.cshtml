@@ -11,7 +11,8 @@
     <div class="row">
         <div class="col-md-6">
             <!-- Carousel for Multiple Images -->
-            <div id="Carousel-@Model.Id" class="carousel slide" data-bs-ride="false" data-bs-interval="false"> <!-- Auto carousel off -->
+            <div id="Carousel-@Model.Id" class="carousel slide" data-bs-ride="false" data-bs-interval="false">
+                <!-- Auto carousel off -->
                 <div class="carousel-inner">
                     <div class="carousel-item active">
                         <img class="d-block w-100" src="@Model.Images.First().ImagePath" alt="First slide">
@@ -36,34 +37,40 @@
             <h2 class="text-white">$@Model.Price/night</h2>
             <p class="text-white"><strong>Description:</strong> @Model.Description</p>
             <p class="text-white"><strong>Location:</strong> @Model.Address, @Model.City</p>
-            
-            <a asp-area="Customer" asp-controller="Reservation" asp-action="CreateReservationForm" asp-route-cabinId="@Model.Id" class="btn btn-success">Book Now</a>
-            <a asp-area="Customer" asp-controller="Cabin" asp-action="CabinList" class="btn btn-secondary">⬅  Back to List</a>
+
+            <a asp-area="Customer" asp-controller="Reservation" asp-action="CreateReservationForm"
+               asp-route-cabinId="@Model.Id" class="btn btn-success">Book Now</a>
+            <a asp-area="Customer" asp-controller="Cabin" asp-action="CabinList" class="btn btn-secondary">⬅ Back to
+                List</a>
         </div>
     </div>
-    
-    <h1 class="text-white pt-3 pb-3" > Availability</h1>
+
+    <h1 class="text-white pt-3 pb-3"> Availability</h1>
     <div class="pb-5" id="calendar"></div>
 
-    <script>
-        document.addEventListener("DOMContentLoaded", function () {
+    @section Scripts
+    {
+        <script>
+            document.addEventListener("DOMContentLoaded", function () {
 
-            var calendarEl = document.getElementById("calendar");
+                let calendarEl = document.getElementById("calendar");
 
-            var calendar = new FullCalendar.Calendar(calendarEl, {
-                initialView: "dayGridMonth",
-                events: "/Customer/Cabin/GetReservations?cabinId=@Model.Id", // Fetch booked dates
-                eventColor: "red", // Default color for booked dates
-                height: 500,
-                contentHeight: "auto",
+                let calendar = new FullCalendar.Calendar(calendarEl, {
+                    initialView: "dayGridMonth",
+                    events: "/Customer/Cabin/GetReservations?cabinId=@Model.Id", // Fetch booked dates
+                    eventColor: "red", // Default color for booked dates
+                    height: 500,
+                    contentHeight: "auto",
 
-                schedulerLicenseKey: 'GPL-My-Project-Is-Open-Source'
+                    schedulerLicenseKey: 'GPL-My-Project-Is-Open-Source'
 
+                });
+
+                calendar.render();
             });
+        </script>
+    }
 
-            calendar.render();
-        });
-    </script>
     <style>
         .fc-toolbar-title {
             color: white !important;
@@ -81,6 +88,7 @@
         .fc-prev-button, .fc-next-button {
             color: white !important;
         }
+
         .fc-daygrid-day:hover {
             background-color: transparent !important;
         }

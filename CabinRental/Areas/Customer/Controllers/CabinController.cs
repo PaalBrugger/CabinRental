@@ -40,10 +40,11 @@ public class CabinController : Controller
             .Where(r => r.CabinId == cabinId)
             .Select(r => new
             {
+                id= r.Id,
                 title = "Booked",
                 start = r.CheckInDate.ToString("yyyy-MM-dd"),
                 end = r.CheckOutDate.AddDays(1).ToString("yyyy-MM-dd"), // Add 1 day to cover full booking
-                Color = "red", // Unavailable days in red
+                color = "red", // Unavailable days in red
                 allDay = true
             })
             .ToListAsync();

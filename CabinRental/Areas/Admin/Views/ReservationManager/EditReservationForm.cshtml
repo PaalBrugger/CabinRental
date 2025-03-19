@@ -1,0 +1,103 @@
+@model Reservation
+
+@{
+    ViewBag.Title = "Edit Reservation";
+    Layout = "_Layout";
+}
+
+<h2 class="text-white">Edit Reservation</h2>
+
+<form asp-area="Admin" asp-controller="ReservationManager" asp-action="EditReservation" method="post">
+
+    <div class="text-white">
+
+        <div class="mb-3">
+            <label>Reservation Id</label>
+            <input type="text" disabled asp-for="Id"/>
+            <input type="hidden" asp-for="Id"></input>
+        </div>
+        <div class="mb-3">
+            <label>UserId</label>
+            <input disabled asp-for="UserId" class="form-control"/>
+            <input type="hidden" asp-for="UserId"></input>
+        </div>
+
+        <div class="mb-3">
+            <label>Email</label>
+            <input type="text" disabled asp-for="User.Email" class="form-control"/>
+        </div>
+
+        <div class="mb-3">
+            <label>First Name</label>
+            <input asp-for="FirstName" class="form-control"/>
+            <span class="text-danger" asp-validation-for="FirstName"></span>
+        </div>
+
+        <div class="mb-3">
+            <label>Last Name</label>
+            <input asp-for="LastName" class="form-control"/>
+            <span class="text-danger" asp-validation-for="LastName"></span>
+        </div>
+
+        <div class="mb-3">
+            <label>Phone Number</label>
+            <input asp-for="PhoneNumber" class="form-control"/>
+            <span class="text-danger" asp-validation-for="PhoneNumber"></span>
+        </div>
+
+        <div class="mb-3">
+            <label>Address</label>
+            <input asp-for="Address" class="form-control"/>
+            <span class="text-danger" asp-validation-for="Address"></span>
+        </div>
+        <div class="mb-3">
+            <label>Cabin Id</label>
+            <input disabled asp-for="CabinId" value="@Model.Cabin.Id" class="form-control"/>
+            <input type="hidden" asp-for="CabinId"></input>
+
+        </div>
+
+        <div class="mb-3">
+            <label>Cabin Name</label>
+            <input disabled class="form-control" value="@Model.Cabin.Name"/>
+        </div>
+
+        <div class="mb-3">
+            <label>Price Per Night</label>
+            <input disabled id="pricePerNight" value="@Model.Cabin.Price" class="form-control"/>
+        </div>
+        <div class="mb-3">
+            <label>Total Price</label>
+            <input asp-for="TotalPrice" id="totalPrice" class="form-control"/>
+        </div>
+
+        <!-- FullCalendar Booking Selection -->
+        <div id="calendar"></div>
+
+        <div class="row pb-3">
+            <div class="col-md-6">
+                <label class="pb-3 pt-3" for="checkInDate"><strong>New Check-in Date</strong></label>
+                <input asp-for="CheckInDate" id="checkInDate" class="form-control"/>
+            </div>
+            <div class="col-md-6">
+                <label class="pb-3 pt-3" for="checkOutDate"><strong>New Check-out Date</strong></label>
+                <input asp-for="CheckOutDate" id="checkOutDate" class="form-control"/>
+            </div>
+        </div>
+
+        <button type="submit" id="submitBtn" class="btn btn-primary w-100">Save Changes</button>
+        <a asp-area="Admin" asp-controller="ReservationManager" asp-action="ManageReservations"
+           class="btn btn-secondary w-100 mt-2">
+            Cancel
+        </a>
+    </div>
+</form>
+
+<input type="hidden" id="tempDataFailureMessage" value="@TempData["Error"]"/>
+<input type="hidden" id="tempDataSuccessMessage" value="@TempData["SuccessMessage"]"/>
+<div id="reservationData" data-cabin-Id="@Model.CabinId"></div>
+
+@section Scripts {
+    <script src="~/js/toastrNotification.js"></script>
+    <script src="~/js/editReservationAdmin.js"></script>
+}

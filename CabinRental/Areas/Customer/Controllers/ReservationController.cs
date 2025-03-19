@@ -50,7 +50,7 @@ public class ReservationController : Controller
     {
         if (!ModelState.IsValid)
         {
-            return View(model);
+            return View("Error");
         }
 
         var user = await _userManager.GetUserAsync(User);

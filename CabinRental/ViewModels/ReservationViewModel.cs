@@ -4,6 +4,7 @@ namespace CabinRental.ViewModels;
 
 public class ReservationViewModel
 {
+    public int Id { get; set; }
     [Required]
     public int CabinId { get; set; }
     [Required]

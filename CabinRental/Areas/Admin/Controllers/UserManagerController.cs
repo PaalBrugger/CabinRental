@@ -93,7 +93,7 @@ public class UserManagerController : Controller
                 ModelState.AddModelError("", error.Description);
             }
 
-            return View("EditUserForm", model);
+            return View("EditUserForm", model); // fix
         }
 
         if (!string.IsNullOrEmpty(model.NewPassword))

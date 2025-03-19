@@ -1,15 +1,14 @@
-@model CabinViewModel
+@model AdminCreateCabinViewModel
 
 @{
-    ViewBag.Title = "Edit Cabin";
+    ViewBag.Title = "Add Cabin";
     Layout = "_Layout";
 }
 
-<h2 class="text-white">Edit Cabin</h2>
+<h2 class="text-white">Add Cabin</h2>
 
 <div class="card bg-dark text-white p-4 mt-3">
-    <form asp-area="Admin"  asp-action="EditCabin" method="post" enctype="multipart/form-data">
-        <input type="hidden" asp-for="Id"/> <!-- Keep track of Cabin ID -->
+    <form asp-area="Admin"  asp-action="CreateCabin" method="post" enctype="multipart/form-data">
 
         <div asp-validation-summary="All" class="text-danger"></div>
 
@@ -53,35 +52,8 @@
     </form>
 </div>
 
-<h4 class="text-white">Cabin Images</h4>
-
-<div class="mb-3 d-flex flex-wrap gap-3">  
-    @foreach (var image in Model.ExistingImages)
-    {
-        <div class="text-center">
-            <div class="d-flex flex-column align-items-center">
-                <img src="@image.ImagePath" alt="Cabin Image" class="img-thumbnail"
-                     style="width:120px; height:120px; object-fit:cover;"/>
-                
-                <form asp-area="Admin" asp-action="DeleteCabinImage" asp-route-id="@image.Id" method="post" class="mt-2">
-                    <input type="hidden" name="imagePath" value="@image.ImagePath"/>
-                    <input type="hidden" name="cabinId" value="@Model.Id"/>
-                    <button type="submit" class="btn btn-danger btn-sm">Delete</button>
-                </form>
-            </div>
-        </div>
-    }
-</div>
-
-
-
-<input type="hidden" id="tempDataSuccessMessage" value="@TempData["SuccessMessage"]" />
-<input type="hidden" id="tempDataFailureMessage" value="@TempData["Error"]"/>
-
 @section Scripts {
     <partial name="_ValidationScriptsPartial"/>
-    <script src="~/js/toastrNotification.js"></script>
-
 }
 
 

@@ -11,7 +11,7 @@ public class Cabin
     [Required]
     public string City { get; set; }
     [Required]
-    public string Address { get; set; }
+    public string Address { get; set; } = String.Empty;
     [Required]
     public double Price { get; set; }
     [Required]
