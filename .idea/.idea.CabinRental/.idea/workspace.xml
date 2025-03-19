@@ -8,20 +8,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7c2b30c3-ec6e-47db-a4ed-372d95390cd2" name="Changes" comment="Added Admin Reservation and Cabin management">
+    <list default="true" id="7c2b30c3-ec6e-47db-a4ed-372d95390cd2" name="Changes" comment="Fixed image carousel">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.CabinRental/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.CabinRental/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CabinRental/Areas/Admin/Views/CabinManager/EditCabinForm.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/CabinRental/Areas/Admin/Views/CabinManager/EditCabinForm.cshtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CabinRental/Areas/Customer/Controllers/CabinController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/CabinRental/Areas/Customer/Controllers/CabinController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CabinRental/Areas/Customer/Views/Cabin/Cabin.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/CabinRental/Areas/Customer/Views/Cabin/Cabin.cshtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CabinRental/Areas/Customer/Views/Cabin/CabinList.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/CabinRental/Areas/Customer/Views/Cabin/CabinList.cshtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CabinRental/wwwroot/Images/Cabin/006aaf92-e6a4-4c08-a280-baa3e7b0d9d5.webp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CabinRental/wwwroot/Images/Cabin/Cabin1Interior.webp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CabinRental/wwwroot/Images/Cabin/Cabin2Interior.webp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CabinRental/wwwroot/Images/Cabin/Cabin3Interior.webp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CabinRental/wwwroot/Images/Cabin/Cabin4.webp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CabinRental/wwwroot/Images/Cabin/Cabin4Interior.webp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CabinRental/wwwroot/Images/Cabin/c58f4c63-74d5-4245-9288-3867a4e5e84f.webp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CabinRental/wwwroot/css/site.css" beforeDir="false" afterPath="$PROJECT_DIR$/CabinRental/wwwroot/css/site.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CabinRental/wwwroot/js/reservationCalendar.js" beforeDir="false" afterPath="$PROJECT_DIR$/CabinRental/wwwroot/js/reservationCalendar.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -162,7 +151,7 @@
       <workItem from="1741615728765" duration="8502000" />
       <workItem from="1741628830487" duration="12427000" />
       <workItem from="1741702447500" duration="20411000" />
-      <workItem from="1742396266688" duration="10614000" />
+      <workItem from="1742396266688" duration="11611000" />
     </task>
     <task id="LOCAL−00001" summary="Test2">
       <option name="closed" value="true" />
@@ -332,7 +321,14 @@
       <option name="presentableId" value="LOCAL−00024" />
       <updated>1742402679398</updated>
     </task>
-    <option name="localTasksCounter" value="25" />
+    <task id="LOCAL−00025" summary="Fixed image carousel">
+      <option name="closed" value="true" />
+      <created>1742407962059</created>
+      <option name="number" value="LOCAL−00025" />
+      <option name="presentableId" value="LOCAL−00025" />
+      <updated>1742407962059</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -424,7 +420,8 @@
     <MESSAGE value="Added customer area and bug fixes" />
     <MESSAGE value="Fixed footer" />
     <MESSAGE value="Added Admin Reservation and Cabin management" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added Admin Reservation and Cabin management" />
+    <MESSAGE value="Fixed image carousel" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixed image carousel" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

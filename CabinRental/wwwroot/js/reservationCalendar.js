@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", function () {
     let selectedCheckIn = null;
     let selectedCheckOut = null;
     let totalPriceField = document.getElementById("totalPrice");
-    let pricePerNight = document.getElementById("pricePerNight")
+    let pricePerNight = parseFloat(document.getElementById("pricePerNight").value);
 
     let submitBtn = document.getElementById("submitBtn");
     let unavailableDates = [];
@@ -62,9 +62,9 @@ document.addEventListener("DOMContentLoaded", function () {
                             alert("This date is already booked! Choose another one.");
                             return;
                         }
-
                         document.getElementById("checkOutDate").value = formatDate(selectedCheckOut);
-
+                        console.log(selectedCheckOut);
+                        console.log(selectedCheckIn);
                         let nights = Math.ceil((selectedCheckOut - selectedCheckIn) / (1000 * 60 * 60 * 24));
                         totalPriceField.textContent = (nights * pricePerNight).toFixed(2);
 
