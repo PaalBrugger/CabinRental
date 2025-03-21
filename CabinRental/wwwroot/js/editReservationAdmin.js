@@ -3,6 +3,8 @@ let totalPriceField = document.getElementById("totalPrice");
 let checkInDate = document.getElementById("checkInDate");
 let checkOutDate = document.getElementById("checkOutDate")
 let cabinId = document.getElementById("reservationData").dataset.cabinId;
+let reservationId = document.getElementById("reservationData").dataset.reservationId;
+
 
 
 
@@ -16,10 +18,10 @@ document.addEventListener("DOMContentLoaded", function () {
         .then(data => {
             let events = data.map(event => ({
                 id: event.id,
-                title: event.id == cabinId ? "User Reservation" : "Booked",
+                title: event.id == reservationId ? "User Reservation" : "Booked",
                 start: event.start,
                 end: event.end,
-                classNames: event.id == cabinId ? ["checkout"] : [""]
+                classNames: event.id == reservationId ? ["checkout"] : [""]
 
             }));
             let calendar = new FullCalendar.Calendar(calendarEl, {
