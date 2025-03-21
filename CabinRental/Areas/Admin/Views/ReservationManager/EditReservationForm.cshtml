@@ -95,7 +95,7 @@
 
 <input type="hidden" id="tempDataFailureMessage" value="@TempData["Error"]"/>
 <input type="hidden" id="tempDataSuccessMessage" value="@TempData["SuccessMessage"]"/>
-<div id="reservationData" data-cabin-Id="@Model.CabinId"></div>
+<div id="reservationData" data-cabin-Id="@Model.CabinId" data-reservation-Id="@Model.Id"></div>
 
 @section Scripts {
     <script src="~/js/toastrNotification.js"></script>
