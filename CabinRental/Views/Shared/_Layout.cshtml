@@ -14,8 +14,6 @@
     <link rel="icon" href="/favicon.ico">
     <link href="https://cdn.jsdelivr.net/npm/fullcalendar@5.11.3/main.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
-
-
 </head>
 <body class="d-flex flex-column min-vh-100">
 <header>
@@ -28,13 +26,15 @@
                 @if (SignInManager.IsSignedIn(User) && !User.IsInRole("Admin"))
                 {
                     <li class="nav-item">
-                        <a class="nav-link text-white" asp-area="Customer" asp-controller="Reservation" asp-action="Reservations">Reservations</a>
+                        <a class="nav-link text-white" asp-area="Customer" asp-controller="Reservation"
+                           asp-action="Reservations">Reservations</a>
                     </li>
                 }
                 @if (User.IsInRole("Admin"))
                 {
                     <li class="nav-item">
-                        <a class="nav-link text-white" asp-area="Admin" asp-controller="Dashboard" asp-action="Index">Admin Panel</a>
+                        <a class="nav-link text-white" asp-area="Admin" asp-controller="Dashboard" asp-action="Index">Admin
+                            Panel</a>
                     </li>
                 }
                 <li class="nav-item">
