@@ -8,9 +8,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7c2b30c3-ec6e-47db-a4ed-372d95390cd2" name="Changes" comment="Fixed image carousel">
+    <list default="true" id="7c2b30c3-ec6e-47db-a4ed-372d95390cd2" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.CabinRental/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.CabinRental/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CabinRental/wwwroot/js/reservationCalendar.js" beforeDir="false" afterPath="$PROJECT_DIR$/CabinRental/wwwroot/js/reservationCalendar.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -25,6 +24,7 @@
       <list>
         <option value="CSS File" />
         <option value="JavaScript File" />
+        <option value="JSX File" />
       </list>
     </option>
   </component>
@@ -67,8 +67,16 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/ea93d582c2debe8d7c89f3f4285f5130809d8b22e1f4c4d9634818087635/RazorPageOfT.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/ed259e49cc3bb2398585cae8e4dffc366721e02a8b027d8a6b4985e3f1f8316/Type.CoreCLR.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/f9d283a2f2a4df9793aaae8987e69a67fb6fa01837724eab17236ef6ff9d2b0/TypeUtils.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock:///Users/paalrebnordbrugger/RiderProjects/CabinRental/CabinRental/Areas/Admin/Views/ReservationManager/EditReservationForm.cshtml" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" root2="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Users/paalrebnordbrugger/RiderProjects/CabinRental/CabinRental/Areas/Customer/Views/Cabin/Cabin.cshtml" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" root2="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Users/paalrebnordbrugger/RiderProjects/CabinRental/CabinRental/Areas/Customer/Views/Cabin/CabinList.cshtml" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" root2="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/CabinRental/Areas/Identity/Pages/Account/Manage/_ManageNav.cshtml" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" root2="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/CabinRental/Models/Cabin.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock:///Users/paalrebnordbrugger/RiderProjects/CabinRental/CabinRental/Views/Home/Index.cshtml" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" root2="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Users/paalrebnordbrugger/RiderProjects/CabinRental/CabinRental/Views/Home/Index.cshtml" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" root2="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Users/paalrebnordbrugger/RiderProjects/CabinRental/CabinRental/Views/Home/Index.cshtml" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" root2="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Users/paalrebnordbrugger/RiderProjects/CabinRental/CabinRental/Views/Shared/_Layout.cshtml" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" root2="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Users/paalrebnordbrugger/RiderProjects/CabinRental/CabinRental/Views/Shared/_Layout.cshtml" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" root2="SKIP_HIGHLIGHTING" />
   </component>
   <component name="KubernetesApiPersistence">{}</component>
   <component name="KubernetesApiProvider">{
@@ -86,22 +94,22 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    ".NET Launch Settings Profile.CabinRental: http.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "master",
-    "list.type.of.created.stylesheet": "CSS",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "HotReloadSettingsPage",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;.NET Launch Settings Profile.CabinRental: http.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager">
     <configuration name="CabinRental: http" type="LaunchSettings" factoryName=".NET Launch Settings Profile" temporary="true">
       <option name="LAUNCH_PROFILE_PROJECT_FILE_PATH" value="$PROJECT_DIR$/CabinRental/CabinRental.csproj" />
@@ -151,7 +159,13 @@
       <workItem from="1741615728765" duration="8502000" />
       <workItem from="1741628830487" duration="12427000" />
       <workItem from="1741702447500" duration="20411000" />
-      <workItem from="1742396266688" duration="11611000" />
+      <workItem from="1742396266688" duration="23994000" />
+      <workItem from="1742814152314" duration="458000" />
+      <workItem from="1742814657257" duration="937000" />
+      <workItem from="1742816922537" duration="1001000" />
+      <workItem from="1742818784870" duration="354000" />
+      <workItem from="1742819252607" duration="1670000" />
+      <workItem from="1742824910666" duration="645000" />
     </task>
     <task id="LOCAL−00001" summary="Test2">
       <option name="closed" value="true" />
@@ -328,7 +342,56 @@
       <option name="presentableId" value="LOCAL−00025" />
       <updated>1742407962059</updated>
     </task>
-    <option name="localTasksCounter" value="26" />
+    <task id="LOCAL−00026" summary="Fix fullcalendar">
+      <option name="closed" value="true" />
+      <created>1742409122965</created>
+      <option name="number" value="LOCAL−00026" />
+      <option name="presentableId" value="LOCAL−00026" />
+      <updated>1742409122965</updated>
+    </task>
+    <task id="LOCAL−00027" summary="Fix Fullcalendar">
+      <option name="closed" value="true" />
+      <created>1742409176879</created>
+      <option name="number" value="LOCAL−00027" />
+      <option name="presentableId" value="LOCAL−00027" />
+      <updated>1742409176879</updated>
+    </task>
+    <task id="LOCAL−00028" summary="Fix FullCalendar">
+      <option name="closed" value="true" />
+      <created>1742560171199</created>
+      <option name="number" value="LOCAL−00028" />
+      <option name="presentableId" value="LOCAL−00028" />
+      <updated>1742560171199</updated>
+    </task>
+    <task id="LOCAL−00029" summary="Fix FullCalendar">
+      <option name="closed" value="true" />
+      <created>1742560192489</created>
+      <option name="number" value="LOCAL−00029" />
+      <option name="presentableId" value="LOCAL−00029" />
+      <updated>1742560192489</updated>
+    </task>
+    <task id="LOCAL−00030" summary="Fixed bootstrap cards">
+      <option name="closed" value="true" />
+      <created>1742669818115</created>
+      <option name="number" value="LOCAL−00030" />
+      <option name="presentableId" value="LOCAL−00030" />
+      <updated>1742669818115</updated>
+    </task>
+    <task id="LOCAL−00031" summary="Fixed title">
+      <option name="closed" value="true" />
+      <created>1742669830411</created>
+      <option name="number" value="LOCAL−00031" />
+      <option name="presentableId" value="LOCAL−00031" />
+      <updated>1742669830411</updated>
+    </task>
+    <task id="LOCAL−00032" summary="Cleanup _Layout">
+      <option name="closed" value="true" />
+      <created>1742671267499</created>
+      <option name="number" value="LOCAL−00032" />
+      <option name="presentableId" value="LOCAL−00032" />
+      <updated>1742671267499</updated>
+    </task>
+    <option name="localTasksCounter" value="33" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -400,8 +463,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
-    <MESSAGE value="Test2" />
-    <MESSAGE value="test 3" />
     <MESSAGE value="favicon and images" />
     <MESSAGE value="Added entity framework and index page update" />
     <MESSAGE value="DB" />
@@ -421,7 +482,13 @@
     <MESSAGE value="Fixed footer" />
     <MESSAGE value="Added Admin Reservation and Cabin management" />
     <MESSAGE value="Fixed image carousel" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fixed image carousel" />
+    <MESSAGE value="Fix fullcalendar" />
+    <MESSAGE value="Fix Fullcalendar" />
+    <MESSAGE value="Fix FullCalendar" />
+    <MESSAGE value="Fixed bootstrap cards" />
+    <MESSAGE value="Fixed title" />
+    <MESSAGE value="Cleanup _Layout" />
+    <option name="LAST_COMMIT_MESSAGE" value="Cleanup _Layout" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
